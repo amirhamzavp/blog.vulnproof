@@ -1,0 +1,72 @@
+site_name: vulnproof
+site_url: https://blog.vulnproof.io
+theme:
+    logo: assets/logo2.png
+    favicon: images/favicon.ico
+    features:
+        - toc.integrate
+        - toc.follow
+        - navigation.top
+        - search.share
+        # - navigation.tabs
+        # - navigation.tabs.sticky
+        # - navigation.indexes
+    icon:
+        # logo: fontawesome/solid/infinity
+        repo: fontawesome/brands/github
+        admonition:
+            note: octicons/tag-16
+            abstract: octicons/checklist-16
+            info: octicons/info-16
+            tip: octicons/squirrel-16
+            success: octicons/check-16
+            question: octicons/question-16
+            warning: octicons/alert-16
+            failure: octicons/x-circle-16
+            danger: octicons/zap-16
+            bug: octicons/bug-16
+            example: octicons/beaker-16
+            quote: octicons/quote-16
+    name: material
+    palette:
+        primary: black
+        scheme: slate
+    font:
+        text: Maven Pro
+plugins:
+    - blog:
+          archive: false
+          categories: false
+markdown_extensions:
+    - attr_list
+    - md_in_html
+    - toc:
+          permalink: 🔗
+          permalink_title: Anchor link to this section for reference
+    - pymdownx.highlight:
+          anchor_linenums: true
+    - pymdownx.inlinehilite
+    - pymdownx.snippets
+    - pymdownx.mark
+    - admonition
+    - pymdownx.details
+    - pymdownx.superfences
+    - def_list
+    - attr_list
+    - pymdownx.emoji:
+          emoji_index: !!python/name:materialx.emoji.twemoji
+          emoji_generator: !!python/name:materialx.emoji.to_svg
+nav:
+    - Home: index.md
+    - Blog: blog/index.md
+extra:
+    analytics:
+        provider: google
+        property: G-17ZERL41HS
+    generator: false
+copyright: Copyright &copy; <script>document.write(new Date().getFullYear())</script> vulnproof
+extra_css:
+    - stylesheets/extra.css
+repo_url: https://github.com/amirhamzavp/blog.vulnproof
+repo_name: blog.vulnproof
+edit_uri: ''
